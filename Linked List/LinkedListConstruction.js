@@ -94,6 +94,25 @@ class Doubly{
         node.prev = null;
         node.next = null;
       }
+      //print linked list 
+        print(){
+                let itr = this.head;
+                while(itr){
+                    if(itr !=null) {
+                        console.log(itr.value, "--->")
+                    }
+                    itr = itr.next;
+                } 
+            }
 }  
 exports.Node = Node;
 exports.Doubly = Doubly;
+
+const linkedlist = new DoublyLinkedList();
+const one = new Node(1);
+const two = new Node(2);
+const four = new Node(4);
+//   linkedlist.setHead(four);
+//   linkedlist.print();
+linkedlist.insertBefore(four,two);
+linkedlist.print();
